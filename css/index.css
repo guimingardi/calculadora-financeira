@@ -1,0 +1,42 @@
+
+main{
+    display: flex;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+
+}
+.container{
+    background-color: rgb(53, 51, 51);
+    height: 350px;
+    width: 50%;
+    grid: 30% 70%
+}
+
+.lcd-background{
+    background-color: antiquewhite;
+    height: 20%;
+    width: 96%;
+    display: flex;
+    margin: 0% 0% 0% 2% 
+}
+
+.lcd{
+    background-color: #7a9140;
+    width: 55%;
+    height: 75%;    
+    margin-top: 1.5%;
+    margin-left: 7%;
+
+}
+
+.container-tc{
+    margin: 2%;
+    height: 70%;
+    border: beige solid;
+    display: grid;
+    grid-template-columns: 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% ;
+    grid-template-rows: 8% 8% 8% 8%;
+    grid-column-gap: 9px;
+    grid-row-gap: 15px;
+
+}
