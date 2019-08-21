@@ -102,3 +102,7 @@ main{
 .tc-g:hover{
     background-color:  rgb(14, 175, 204)
 }
+
+.lcd_numbers{
+    color: black
+}
