@@ -2,9 +2,9 @@ main{
     display: flex;
     justify-content: center;
     font-family: 'Nunito', sans-serif;
-    color: white
-
+    color: white;
 }
+
 .container{
     background-color: rgb(53, 51, 51);
     height: 350px;
@@ -79,4 +79,19 @@ main{
     text-orientation: upright;
     line-height: 45px;
     font-size: 14px
+}
+
+.tc-f{
+    background-color: #e4881f
+}
+.tc-f:hover{
+    background-color: #dd9e56
+}
+
+.tc-g{
+    background-color:  rgb(21, 187, 216)
+}
+
+.tc-g:hover{
+    background-color:  rgb(14, 175, 204)
 }
