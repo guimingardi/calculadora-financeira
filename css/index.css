@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'DS-DIGII';
+    src: url('DS-DIGII.TTF');
+ }
+
 main{
     display: flex;
     justify-content: center;
@@ -34,7 +39,9 @@ main{
     border-bottom: 2px  #cfbd65 solid;
     font-size: 35px;
     box-sizing: border-box;
-    padding: 1% 
+    padding: 1%;
+    font-family: 'DS-DIGII';
+
 }
 
 .container-tc{
