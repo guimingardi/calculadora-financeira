@@ -36,6 +36,9 @@ function basic_operators(){
     else if (basic == '+'){
         result = value_one + value_two
     }
+
+    
+
     value_one = result
     lcd.innerText = result
 }
