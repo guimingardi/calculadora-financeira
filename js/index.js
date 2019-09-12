@@ -11,18 +11,24 @@ document.addEventListener('keydown', digitado)
 
 let result
 let contador = 0
-let qtd_pilha = 0
+let contador_entra = 0
 
 function mostrar() {
+    if (contador_entra == 1){
+        lcd.innerText = ''
+        contador_entra = 0
+    }
     lcd.innerText += event.target.innerText
 }
 
 function entra() {
+    contador_entra++
     pega_numero.push(Number(lcd.innerText))
-    contador = 0
-    lcd.innerText = ''
-    qtd_pilha++
-    // console.log(qtd_pilha)
+    if(lcd.innerText.indexOf('.') >= 0){
+        return
+    } else {
+        dot()
+    }
 }
 
 class calculo {
@@ -37,7 +43,7 @@ class calculo {
     }
 
     isEmpty() {
-        this.pilha.length === 0
+        return this.pilha.length === 0
     }
 }
 
@@ -47,7 +53,6 @@ let pega_numero = new calculo()
 function remove() {
     lcd.innerText = '';
     contador = 0
-    qtd_pilha = 0
 }
 
 function dot() {
@@ -59,6 +64,9 @@ function dot() {
         if (lcd.innerText == '') {
             lcd.innerText = '0.'
         }
+        else {
+            lcd.innerText = lcd.innerText + '.'
+        }
     }
 
 }
@@ -67,8 +75,12 @@ let tecla
 let tecla_operador
 
 function basic_operators() {
+
+    // if (isEmpty()) {
+    //     return lcd.innerText = result
+    // }
+
     let value_one = pega_numero.pop()
-    qtd_pilha--
     basic = event.target.innerText
     value_two = Number(lcd.innerText)
     lcd.innerText = ''
@@ -84,11 +96,6 @@ function basic_operators() {
     }
     else if (basic == '+' || tecla_operador == '+') {
         result = value_one + value_two
-    }
-    debugger
-    if(isNaN && qtd_pilha < 0 ){
-        return
-        //nao consegui fixar o nuemero
     }
     value_one = result
     lcd.innerText = result
@@ -125,7 +132,7 @@ function funcao_operacao(event) {
         entra()
     }
 
-    if(tecla_operador == '*' || tecla_operador == '-' || tecla_operador == '+' || tecla_operador == '/'){
+    if (tecla_operador == '*' || tecla_operador == '-' || tecla_operador == '+' || tecla_operador == '/') {
         basic_operators()
     }
 
