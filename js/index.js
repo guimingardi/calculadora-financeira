@@ -16,7 +16,7 @@ function mostrar() {
     
     if (contador_entra == 1) {
         lcd.innerText = ''
-        contador_entra = 0
+        contador_entra = 0 
     }
     lcd.innerText += event.target.innerText
 }
